@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -41,6 +42,10 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetKey("down") || Input.GetKey("s")){
             // Set the y component of the movement vector to -1 (downward direction)
             moving.y = -1;
+        }
+
+        if (Input.GetKey("escape")){
+            SceneManager.LoadScene("SplashScreen");
         }
     }
 }
